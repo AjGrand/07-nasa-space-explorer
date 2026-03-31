@@ -57,15 +57,10 @@ body::after {
   inset: -20%;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.32;
-  background-image:
-    repeating-linear-gradient(
-      105deg,
-      rgba(255, 255, 255, 0.9) 0 1px,
-      transparent 1px 24px
-    );
+  opacity: 0;
+  background-image: none;
   transform: scale(1.2);
-  animation: warpStreaks 1.2s linear infinite;
+  animation: none;
 }
 
 /* Centered container */
@@ -93,23 +88,18 @@ body::after {
   content: '';
   position: absolute;
   inset: 0;
-  background-image:
-    repeating-linear-gradient(
-      92deg,
-      rgba(255, 255, 255, 0.95) 0 1px,
-      transparent 1px 18px
-    );
+  background-image: none;
 }
 
 .warp-tunnel::before {
-  opacity: 0.35;
-  animation: tunnelRun 1.4s linear infinite;
+  opacity: 0;
+  animation: none;
 }
 
 .warp-tunnel::after {
-  opacity: 0.2;
+  opacity: 0;
   filter: blur(1px);
-  animation: tunnelRunFast 0.85s linear infinite;
+  animation: none;
 }
 
 /* Header */
@@ -600,15 +590,7 @@ body.animations-paused .container {
 }
 
 .warp-lines {
-  position: absolute;
-  inset: -50%;
-  background-image:
-    linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0) 100%);
-  background-size: 3px 120px;
-  background-repeat: repeat;
-  opacity: 0.08;
-  transform: perspective(800px) rotateX(75deg);
-  animation: warpRush 3s linear infinite;
+  display: none;
 }
 
 @keyframes warpRush {
